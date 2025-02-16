@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edgr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header center">
+        <nav class="header__nav">
+            <a id="description" class="header__nav-link" href="index.html">описание</a>
+            <a id="reviews" class="header__nav-link" href="reviews.html">отзывы</a>
+            <a id="question" class="header__nav-link" href="question.html">откуда?</a>
+        </nav>
+    </header>
+    <div class="question center">
+        <div class="question__left">
+            <p class="question__left-text">Томаты на ветке красные (помидоры) - более плотные, яркие и ароматные по сравнению с обычными. Они славятся низкой калорийностью и высоким содержанием витаминов, клетчатки, пектина и минеральных веществ. В них содержатся также каротиноиды, кислоты и мощный антиоксидант ликопин.
+            </p>
+            <p class="question__left-text adaptive__text"> Помидор - незаменимый продукт в мировой кулинарии. Он - основа многочисленных соусов, маринадов, кетчупа, испанского холодного супа Гаспачо или итальянской закуски Капрезе.</p>
+        </div>
+        <p class="adaptive__name">Наталья и Юрий Лейшан</p>
+        <div class="question__right">
+            <img class="question__right-img" src="img/question-img.jpeg" alt="">
+            <img class="adaptive__img" src="img/adaptive-img.jpeg" alt="">
+            <div class="question__right-box">
+                <button class="question__right-button">Сертификаты</button>
+                <button class="question__right-button">О поставщике</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const descriptionEl = document.getElementById('description');
+        const reviewsEl = document.getElementById('reviews');
+        const questionEl = document.getElementById('question');
+
+        let currentUrl = window.location.href;
+
+        if (currentUrl.includes('index')) {
+            descriptionEl.classList.add('header__nav-link--decor');
+        } else if (currentUrl.includes('question')) {
+            questionEl.classList.add('header__nav-link--decor');
+        } else if (currentUrl.includes('reviews')) {
+            reviewsEl.classList.add('header__nav-link--decor');
+        }
+
+    </script>
+</body>
+</html>
